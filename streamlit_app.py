@@ -5,7 +5,8 @@ import openai
 from llama_index import SimpleDirectoryReader
 
 st.set_page_config(page_title="Chat with your syllabus!", page_icon="🦙", layout="centered", initial_sidebar_state="auto", menu_items=None)
-openai.api_key = st.secrets.openai_key
+#openai.api_key = st.secrets.openai_key
+openai.api_key = os.getenv('OPENAI_API_KEY')
 st.title("Chat with the Syllabus and Course Outline 💬🦙")
 st.info("Check out the Data Analytics Program at Miami Dade College [MDC](https://mdc.edu)", icon="📃")
          
